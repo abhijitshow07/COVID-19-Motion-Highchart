@@ -5,7 +5,6 @@ Created on Mon Jun  1 14:57:31 2020
 @author: ABHIJIT SHOW
 """
 
-
 from flask_cors import CORS, cross_origin
 from flask import Flask, render_template, json, jsonify
 
@@ -18,10 +17,10 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 def home():
     return render_template('index_motion.html')
 
-@app.route('/corona_time_series')
+@app.route('/world_time_series')
 @cross_origin()
 def time_series():
-    with open('corona_time_series.json') as file:
+    with open('world_time_series.json') as file:
         corona_time_series = json.load(file)
     return jsonify(corona_time_series)
 

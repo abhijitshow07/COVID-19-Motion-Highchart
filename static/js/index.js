@@ -1,18 +1,18 @@
 $(function () {
 	$.ajax({
-        url: "http://127.0.0.1:5000/corona_time_series",
+        url: "/world_time_series",
         type: 'GET',
         dataType: 'json', // added data type
         success: function(response) {
-
     	console.log(response)
         motion_chart(response)
     }
 });
 });
-
 function motion_chart(response){
 
+    header = document.getElementById('header');
+    header.innerHTML = "COVID-19 MOTION";
 	input = document.getElementById('play-range')
 	output = document.getElementById('play-output')
 
