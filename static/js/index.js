@@ -11,8 +11,6 @@ $(function () {
 });
 function motion_chart(response){
 
-    header = document.getElementById('header');
-    header.innerHTML = "COVID-19 MOTION";
 	input = document.getElementById('play-range')
 	output = document.getElementById('play-output')
 
